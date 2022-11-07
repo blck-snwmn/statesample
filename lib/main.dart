@@ -72,6 +72,8 @@ class EditPage extends ConsumerWidget {
           const Spacer(),
           TextField(
             controller: TextEditingController(text: controller.state),
+            keyboardType: TextInputType.multiline,
+            maxLines: null,
             onChanged: (txt) {
               controller.state = txt;
             },
