@@ -1,0 +1,22 @@
+name: CI 
+  
+on:  
+  pull_request:  
+    types: [opened]  
+  push:
+
+
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@latest
+      - name: Install packages
+        run: flutter pub get
+      - name: Linter
+        run: flutter analyze
+      - name: Test
+        run: flutter test
+      
