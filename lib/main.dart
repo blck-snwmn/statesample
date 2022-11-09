@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final txtProvider = StateProvider((ref) {
-  return "no text";
+  return "no text1";
 });
 
 void main() {
